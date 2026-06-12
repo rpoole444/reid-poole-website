@@ -37,6 +37,9 @@ export default function MusicPage() {
           Two decades of jazz, brass band, swing, funk, vocals, and
           improvisation, from New Orleans clubs to Colorado stages.
         </p>
+        <Link className="text-link music-project-link" href="/projects">
+          See the complete project roster <span aria-hidden="true">↗</span>
+        </Link>
         <div className="music-list">
           {musicProjects.map(([title, description], index) => (
             <a

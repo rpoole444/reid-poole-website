@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 
 export const metadata = {
@@ -21,6 +22,16 @@ export default function AboutPage() {
       <article className="interior-content">
         <p className="eyebrow">About Reid</p>
         <h1>A musician&apos;s ear. A builder&apos;s mind.</h1>
+        <figure className="about-portrait">
+          <Image
+            src="/images/photos/family-trumpet.jpg"
+            alt="Reid Poole holding his child while playing trumpet"
+            fill
+            priority
+            sizes="(max-width: 900px) 100vw, 42vw"
+          />
+          <figcaption>Musician, teacher, husband, and father.</figcaption>
+        </figure>
         <div className="interior-columns">
           <p className="lead">
             Reid Poole is a trumpet player, vocalist, bandleader, educator,

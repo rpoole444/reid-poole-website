@@ -1,5 +1,7 @@
+import Image from "next/image";
 import Link from "next/link";
 import { InteractiveHero } from "@/components/interactive-hero";
+import { projects } from "@/data/projects";
 
 const services = [
   {
@@ -28,23 +30,7 @@ const services = [
   },
 ];
 
-const projects = [
-  {
-    title: "New Orleans Big Beat",
-    type: "Bandleading · Performance",
-    mark: "NOBB",
-  },
-  {
-    title: "Dinosaurchestra",
-    type: "Recording · Live project",
-    mark: "DINO",
-  },
-  {
-    title: "GigBoss",
-    type: "Product · Music technology",
-    mark: "GB",
-  },
-];
+const featuredProjects = [projects[0], projects[1], projects[4]];
 
 export default function Home() {
   return (
@@ -55,7 +41,7 @@ export default function Home() {
           <strong>Reid Poole</strong>
         </Link>
         <nav aria-label="Main navigation">
-          <Link href="#work">Work</Link>
+          <Link href="/projects">Projects</Link>
           <Link href="#services">Services</Link>
           <Link href="#about">About</Link>
           <Link href="/photos">Photos</Link>
@@ -94,6 +80,17 @@ export default function Home() {
           Available worldwide
         </div>
       </section>
+
+      <figure className="home-photo">
+        <Image
+          src="/images/photos/blue-hour-brass.jpg"
+          alt="Reid Poole playing trumpet with a brass band at blue hour"
+          fill
+          priority
+          sizes="100vw"
+        />
+        <figcaption>Live music belongs in the middle of things.</figcaption>
+      </figure>
 
       <section className="statement" id="about">
         <p className="section-label">A wider practice</p>
@@ -138,15 +135,24 @@ export default function Home() {
             <p className="section-label">Selected work</p>
             <h2>Built to be heard.</h2>
           </div>
-          <Link className="text-link" href="/music">
-            Explore all music <span aria-hidden="true">↗</span>
+          <Link className="text-link" href="/projects">
+            Explore all projects <span aria-hidden="true">↗</span>
           </Link>
         </div>
         <div className="project-grid">
-          {projects.map((project, index) => (
-            <Link className={`project project-${index + 1}`} href="/music" key={project.title}>
-              <span className="project-mark">{project.mark}</span>
-              <span className="project-meta">{project.type}</span>
+          {featuredProjects.map((project, index) => (
+            <Link
+              className={`project project-${index + 1}`}
+              href="/projects"
+              key={project.title}
+            >
+              <Image
+                src={project.image}
+                alt=""
+                fill
+                sizes="(max-width: 900px) 100vw, 33vw"
+              />
+              <span className="project-meta">{project.category}</span>
               <h3>{project.title}</h3>
               <span className="project-arrow" aria-hidden="true">↗</span>
             </Link>

@@ -221,6 +221,34 @@ h1 span {
   display: block;
 }
 
+.home-photo {
+  height: min(72vw, 820px);
+  margin: 0;
+  min-height: 520px;
+  overflow: hidden;
+  position: relative;
+}
+
+.home-photo::after {
+  background: linear-gradient(180deg, transparent 45%, rgba(18, 16, 14, 0.8));
+  content: "";
+  inset: 0;
+  position: absolute;
+}
+
+.home-photo img {
+  object-fit: cover;
+}
+
+.home-photo figcaption {
+  bottom: 34px;
+  font-family: Georgia, serif;
+  font-size: clamp(18px, 2vw, 28px);
+  left: 7vw;
+  position: absolute;
+  z-index: 1;
+}
+
 .visual-stage {
   --pointer-x: 0deg;
   --pointer-y: 0deg;
@@ -526,32 +554,37 @@ h1 span {
   transform: translate(-50%, -50%);
   transition: transform 500ms ease;
   width: 330px;
+  z-index: 1;
 }
 
 .project:hover::before {
   transform: translate(-50%, -50%) scale(1.15) rotate(20deg);
 }
 
-.project-2 { background: #6f2e1d; }
-.project-3 { background: #af7e3f; color: var(--ink); }
+.project::after {
+  background: linear-gradient(180deg, rgba(18, 16, 14, 0.06), rgba(18, 16, 14, 0.9));
+  content: "";
+  inset: 0;
+  position: absolute;
+}
 
-.project-mark {
-  align-items: center;
-  display: flex;
-  flex: 1;
-  font-family: Georgia, serif;
-  font-size: clamp(54px, 7vw, 110px);
-  font-style: italic;
-  justify-content: center;
-  letter-spacing: -0.08em;
-  position: relative;
+.project img {
+  object-fit: cover;
+  transition: transform 600ms ease;
+}
+
+.project:hover img {
+  transform: scale(1.04);
 }
 
 .project-meta {
+  margin-top: auto;
   font-size: 9px;
   letter-spacing: 0.16em;
   margin-bottom: 12px;
+  position: relative;
   text-transform: uppercase;
+  z-index: 2;
 }
 
 .project h3 {
@@ -559,12 +592,15 @@ h1 span {
   font-size: 27px;
   font-weight: 400;
   margin-bottom: 0;
+  position: relative;
+  z-index: 2;
 }
 
 .project-arrow {
   bottom: 35px;
   position: absolute;
   right: 32px;
+  z-index: 2;
 }
 
 .contact {
@@ -669,12 +705,44 @@ footer small {
   margin-top: 30px;
 }
 
+.about-portrait {
+  aspect-ratio: 5 / 6;
+  margin: 90px 0 0 auto;
+  max-width: 620px;
+  overflow: hidden;
+  position: relative;
+  width: 44%;
+}
+
+.about-portrait img {
+  object-fit: cover;
+}
+
+.about-portrait figcaption {
+  background: var(--copper);
+  bottom: 0;
+  color: var(--ink);
+  font-size: 10px;
+  font-weight: 700;
+  left: 0;
+  letter-spacing: 0.12em;
+  padding: 14px 18px;
+  position: absolute;
+  text-transform: uppercase;
+  z-index: 1;
+}
+
 .music-intro {
   color: rgba(238, 233, 223, 0.65);
   font-family: Georgia, serif;
   font-size: 20px;
   line-height: 1.6;
   max-width: 680px;
+}
+
+.music-project-link {
+  display: inline-block;
+  margin-top: 25px;
 }
 
 .music-list {
@@ -972,6 +1040,7 @@ footer small {
 
 .photo-grid,
 .video-grid {
+  align-items: start;
   display: grid;
   gap: 24px;
   grid-template-columns: repeat(2, 1fr);
@@ -995,6 +1064,90 @@ footer small {
 
 .photo-grid .photo-square img {
   aspect-ratio: 1;
+}
+
+.projects-index {
+  display: grid;
+  gap: 24px;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  margin-top: 90px;
+}
+
+.projects-index-card {
+  background: rgba(238, 233, 223, 0.04);
+  border: 1px solid rgba(238, 233, 223, 0.14);
+  display: flex;
+  flex-direction: column;
+  min-height: 600px;
+  overflow: hidden;
+  transition: border-color 180ms ease, transform 180ms ease;
+}
+
+a.projects-index-card:hover {
+  border-color: var(--gold);
+  transform: translateY(-4px);
+}
+
+.projects-index-image {
+  aspect-ratio: 4 / 3;
+  background: #080807;
+  overflow: hidden;
+  position: relative;
+}
+
+.projects-index-image img {
+  object-fit: cover;
+  transition: transform 500ms ease;
+}
+
+a.projects-index-card:hover img {
+  transform: scale(1.035);
+}
+
+.projects-index-copy {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  padding: 28px;
+}
+
+.projects-index-copy p {
+  color: var(--copper);
+  font-size: 9px;
+  letter-spacing: 0.16em;
+  margin-bottom: 17px;
+  text-transform: uppercase;
+}
+
+.projects-index-copy h2 {
+  font-family: Georgia, serif;
+  font-size: clamp(25px, 2.6vw, 39px);
+  font-weight: 400;
+  letter-spacing: -0.035em;
+  line-height: 1;
+  margin-bottom: 18px;
+}
+
+.projects-index-copy > span {
+  color: rgba(238, 233, 223, 0.58);
+  font-family: Georgia, serif;
+  font-size: 15px;
+  line-height: 1.65;
+}
+
+.projects-index-copy b {
+  border-top: 1px solid rgba(238, 233, 223, 0.14);
+  color: var(--gold);
+  font-size: 10px;
+  font-weight: 400;
+  letter-spacing: 0.09em;
+  margin-top: auto;
+  padding-top: 20px;
+  text-transform: uppercase;
+}
+
+.projects-index-copy i {
+  font-style: normal;
 }
 
 .photo-grid figcaption,
@@ -1125,6 +1278,10 @@ footer small {
   .recording-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
+
+  .projects-index {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
 }
 
 @media (max-width: 560px) {
@@ -1162,6 +1319,15 @@ footer small {
     margin-top: 20px;
   }
 
+  .home-photo {
+    height: 72svh;
+    min-height: 520px;
+  }
+
+  .home-photo img {
+    object-position: 54% center;
+  }
+
   .statement,
   .services,
   .work,
@@ -1193,8 +1359,18 @@ footer small {
   .recording-grid,
   .recording-group:first-of-type .recording-grid,
   .photo-grid,
-  .video-grid {
+  .video-grid,
+  .projects-index {
     grid-template-columns: 1fr;
+  }
+
+  .about-portrait {
+    margin-top: 60px;
+    width: 100%;
+  }
+
+  .projects-index-card {
+    min-height: 540px;
   }
 
   .form-field-wide {
