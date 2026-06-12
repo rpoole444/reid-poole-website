@@ -58,6 +58,7 @@ export default function Home() {
           <Link href="#work">Work</Link>
           <Link href="#services">Services</Link>
           <Link href="#about">About</Link>
+          <Link href="/photos">Photos</Link>
         </nav>
         <Link className="header-cta" href="/book">
           Start a project
