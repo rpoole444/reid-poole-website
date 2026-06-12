@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { MediaGallery } from "@/components/media-gallery";
 
 const musicProjects = [
   ["New Orleans Big Beat", "New Orleans spirit, assembled in Colorado."],
@@ -21,7 +22,7 @@ export default function MusicPage() {
           <span>RP</span>
           <strong>Reid Poole</strong>
         </Link>
-        <Link className="header-cta" href="/#contact">
+        <Link className="header-cta" href="/book">
           Book a performance
         </Link>
       </header>
@@ -47,6 +48,7 @@ export default function MusicPage() {
             </a>
           ))}
         </div>
+        <MediaGallery />
       </article>
     </main>
   );

@@ -8,6 +8,7 @@ const services = [
     description:
       "New Orleans-rooted jazz, brass, swing, and custom ensembles for rooms that deserve more than background music.",
     link: "Explore performances",
+    href: "/book?service=performance",
   },
   {
     number: "02",
@@ -15,6 +16,7 @@ const services = [
     description:
       "Direct, practical coaching in trumpet, improvisation, bandleading, artistry, and the business around the music.",
     link: "Study with Reid",
+    href: "/book?service=lessons",
   },
   {
     number: "03",
@@ -22,6 +24,7 @@ const services = [
     description:
       "Websites, apps, and thoughtful digital systems built by a working musician who understands the actual problem.",
     link: "Build something useful",
+    href: "/book?service=technology",
   },
 ];
 
@@ -56,7 +59,7 @@ export default function Home() {
           <Link href="#services">Services</Link>
           <Link href="#about">About</Link>
         </nav>
-        <Link className="header-cta" href="#contact">
+        <Link className="header-cta" href="/book">
           Start a project
         </Link>
       </header>
@@ -74,7 +77,7 @@ export default function Home() {
             creative ideas.
           </p>
           <div className="hero-actions">
-            <Link className="button button-primary" href="#contact">
+            <Link className="button button-primary" href="/book">
               Book Reid <span aria-hidden="true">↗</span>
             </Link>
             <Link className="text-link" href="#work">
@@ -120,7 +123,7 @@ export default function Home() {
               <span className="service-number">{service.number}</span>
               <h3>{service.title}</h3>
               <p>{service.description}</p>
-              <Link href="#contact" aria-label={`${service.link}: ${service.title}`}>
+              <Link href={service.href} aria-label={`${service.link}: ${service.title}`}>
                 {service.link} <span aria-hidden="true">↗</span>
               </Link>
             </article>
@@ -153,9 +156,9 @@ export default function Home() {
       <section className="contact" id="contact">
         <p className="section-label">Make something memorable</p>
         <h2>Have a room to move, an artist to develop, or an idea to build?</h2>
-        <a className="contact-link" href="mailto:poole.reid@gmail.com">
-          poole.reid@gmail.com <span aria-hidden="true">↗</span>
-        </a>
+        <Link className="contact-link" href="/book">
+          Start your inquiry <span aria-hidden="true">↗</span>
+        </Link>
       </section>
 
       <footer>

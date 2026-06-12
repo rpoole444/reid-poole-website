@@ -713,6 +713,231 @@ footer small {
   font-weight: 400;
 }
 
+.booking-content {
+  max-width: 1380px;
+}
+
+.booking-intro {
+  align-items: end;
+  display: grid;
+  gap: 8vw;
+  grid-template-columns: 1.4fr 0.6fr;
+}
+
+.booking-intro h1 {
+  font-size: clamp(64px, 8vw, 126px);
+  margin-bottom: 0;
+}
+
+.booking-aside {
+  padding-bottom: 10px;
+}
+
+.booking-aside > p {
+  color: rgba(238, 233, 223, 0.68);
+  font-family: Georgia, serif;
+  font-size: 18px;
+  line-height: 1.7;
+}
+
+.booking-aside dl {
+  border-top: 1px solid rgba(238, 233, 223, 0.18);
+  margin: 36px 0 0;
+}
+
+.booking-aside dl div {
+  border-bottom: 1px solid rgba(238, 233, 223, 0.18);
+  display: grid;
+  gap: 20px;
+  grid-template-columns: 0.8fr 1.2fr;
+  padding: 14px 0;
+}
+
+.booking-aside dt {
+  color: rgba(238, 233, 223, 0.42);
+  font-size: 9px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.booking-aside dd {
+  font-family: Georgia, serif;
+  font-size: 14px;
+  margin: 0;
+}
+
+.booking-form {
+  border-top: 1px solid rgba(238, 233, 223, 0.22);
+  display: grid;
+  gap: 30px 24px;
+  grid-template-columns: 1fr 1fr;
+  margin-top: 100px;
+  padding-top: 55px;
+}
+
+.form-field {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.form-field-wide {
+  grid-column: 1 / -1;
+}
+
+.form-field label {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+}
+
+.form-field label span {
+  color: rgba(238, 233, 223, 0.38);
+  font-weight: 400;
+}
+
+.form-field input,
+.form-field select,
+.form-field textarea {
+  appearance: none;
+  background: rgba(238, 233, 223, 0.04);
+  border: 1px solid rgba(238, 233, 223, 0.22);
+  border-radius: 0;
+  color: var(--paper);
+  font: inherit;
+  font-family: Georgia, serif;
+  font-size: 17px;
+  min-height: 56px;
+  padding: 15px 16px;
+  width: 100%;
+}
+
+.form-field select {
+  background-image:
+    linear-gradient(45deg, transparent 50%, var(--paper) 50%),
+    linear-gradient(135deg, var(--paper) 50%, transparent 50%);
+  background-position:
+    calc(100% - 20px) 50%,
+    calc(100% - 15px) 50%;
+  background-repeat: no-repeat;
+  background-size: 5px 5px, 5px 5px;
+}
+
+.form-field option {
+  background: var(--ink);
+  color: var(--paper);
+}
+
+.form-field textarea {
+  min-height: 180px;
+  resize: vertical;
+}
+
+.form-field input::placeholder,
+.form-field textarea::placeholder {
+  color: rgba(238, 233, 223, 0.35);
+}
+
+.form-field input:focus,
+.form-field select:focus,
+.form-field textarea:focus {
+  border-color: var(--gold);
+  outline: 2px solid transparent;
+}
+
+.form-submit {
+  align-items: center;
+  display: flex;
+  gap: 28px;
+  margin-top: 14px;
+}
+
+.form-submit button {
+  border: 0;
+  cursor: pointer;
+}
+
+.form-submit p,
+.form-status {
+  color: rgba(238, 233, 223, 0.52);
+  font-size: 12px;
+  line-height: 1.6;
+  margin: 0;
+  max-width: 420px;
+}
+
+.form-status a {
+  border-bottom: 1px solid currentColor;
+}
+
+.media-empty,
+.media-gallery {
+  border-top: 1px solid rgba(238, 233, 223, 0.18);
+  margin-top: 130px;
+  padding-top: 80px;
+}
+
+.media-empty h2,
+.media-gallery h2 {
+  font-family: Georgia, serif;
+  font-size: clamp(38px, 5vw, 70px);
+  font-weight: 400;
+  letter-spacing: -0.045em;
+  max-width: 800px;
+}
+
+.media-empty > p:last-child {
+  color: rgba(238, 233, 223, 0.6);
+  font-family: Georgia, serif;
+  font-size: 18px;
+  line-height: 1.7;
+  max-width: 620px;
+}
+
+.photo-grid,
+.video-grid {
+  display: grid;
+  gap: 24px;
+  grid-template-columns: repeat(2, 1fr);
+  margin-top: 55px;
+}
+
+.photo-grid figure {
+  margin: 0;
+}
+
+.photo-grid img {
+  height: auto;
+  width: 100%;
+}
+
+.photo-grid figcaption,
+.video-grid p {
+  color: rgba(238, 233, 223, 0.52);
+  font-size: 12px;
+  line-height: 1.6;
+  margin-top: 12px;
+}
+
+.video-frame {
+  aspect-ratio: 16 / 9;
+  background: #000;
+}
+
+.video-frame iframe {
+  border: 0;
+  height: 100%;
+  width: 100%;
+}
+
+.video-grid h3 {
+  font-family: Georgia, serif;
+  font-size: 25px;
+  font-weight: 400;
+  margin: 18px 0 8px;
+}
+
 @media (max-width: 900px) {
   .site-header {
     grid-template-columns: 1fr auto;
@@ -789,6 +1014,15 @@ footer small {
   .music-list a {
     gap: 12px;
   }
+
+  .booking-intro {
+    align-items: start;
+    grid-template-columns: 1fr;
+  }
+
+  .booking-aside {
+    max-width: 600px;
+  }
 }
 
 @media (max-width: 560px) {
@@ -851,6 +1085,21 @@ footer small {
     display: flex;
     flex-direction: column;
     padding: 55px 5vw 30px;
+  }
+
+  .booking-form,
+  .photo-grid,
+  .video-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .form-field-wide {
+    grid-column: auto;
+  }
+
+  .form-submit {
+    align-items: flex-start;
+    flex-direction: column;
   }
 }
 

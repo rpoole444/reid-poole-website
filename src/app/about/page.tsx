@@ -14,7 +14,7 @@ export default function AboutPage() {
           <span>RP</span>
           <strong>Reid Poole</strong>
         </Link>
-        <Link className="header-cta" href="/#contact">
+        <Link className="header-cta" href="/book">
           Start a project
         </Link>
       </header>
@@ -39,7 +39,7 @@ export default function AboutPage() {
               technology, mentors artists, and helps strengthen creative
               communities.
             </p>
-            <Link className="button button-primary" href="/#contact">
+            <Link className="button button-primary" href="/book">
               Work with Reid <span aria-hidden="true">↗</span>
             </Link>
           </div>
