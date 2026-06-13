@@ -4,6 +4,7 @@ export type Project = {
   description: string;
   image: string;
   imageAlt: string;
+  imageFit?: "cover" | "contain";
   href?: string;
   linkLabel?: string;
   status?: string;
@@ -64,8 +65,9 @@ export const projects: Project[] = [
     category: "Radio · Curation",
     description:
       "Human-hosted radio and human-chosen music: a listening project presented by Alpine Groove Guide.",
-    image: "/images/projects/alpine-groove-guide.png",
-    imageAlt: "Alpine Groove Guide mountain and music logo",
+    image: "/images/projects/human-frequency-wordmark-stacked.png",
+    imageAlt: "Human Frequency, human-hosted radio and human-chosen music",
+    imageFit: "contain",
     status: "In development",
   },
   {

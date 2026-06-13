@@ -37,6 +37,7 @@ export default function ProjectsPage() {
                     alt={project.imageAlt}
                     fill
                     sizes="(max-width: 700px) 100vw, (max-width: 1100px) 50vw, 33vw"
+                    style={{ objectFit: project.imageFit || "cover" }}
                   />
                 </div>
                 <div className="projects-index-copy">

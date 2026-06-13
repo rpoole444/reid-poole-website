@@ -309,58 +309,31 @@ h1 span {
 
 .instrument {
   filter: drop-shadow(20px 30px 30px rgba(0, 0, 0, 0.45));
-  height: 34%;
-  left: 50%;
+  height: auto;
+  left: 48%;
   position: absolute;
   top: 50%;
-  transform: translate(-48%, -50%) rotate(-15deg);
-  width: 66%;
+  transform: translate(-48%, -50%) rotate(-8deg);
+  transform-origin: center;
+  width: 82%;
 }
 
-.leadpipe {
-  background: linear-gradient(#f4cf80, #8f5525 55%, #e0a54d);
-  border-radius: 50px;
-  height: 28%;
-  left: 7%;
-  position: absolute;
-  top: 38%;
-  width: 75%;
+.trumpet-tube {
+  fill: none;
+  stroke: url(#brass-body);
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 19;
 }
 
-.bell {
-  background: radial-gradient(ellipse at 75% 50%, #24130d 0 13%, #be7839 14% 31%, #f1c671 45%, #9a572b 70%);
-  border-radius: 50%;
-  height: 100%;
-  position: absolute;
-  right: 0;
-  top: 0;
-  width: 34%;
-  z-index: 2;
+.trumpet-leadpipe {
+  stroke-width: 13;
 }
 
-.valve {
-  background: linear-gradient(90deg, #8b4d27, #e8bc67, #75401f);
-  height: 62%;
-  position: absolute;
-  top: 18%;
-  width: 7%;
-  z-index: 3;
+.trumpet-main-slide,
+.trumpet-third-slide {
+  stroke-width: 12;
 }
-
-.valve::before {
-  background: var(--gold);
-  border-radius: 3px;
-  content: "";
-  height: 8%;
-  left: -35%;
-  position: absolute;
-  top: -7%;
-  width: 170%;
-}
-
-.valve-one { left: 36%; }
-.valve-two { left: 46%; }
-.valve-three { left: 56%; }
 
 .sound-wave {
   border: 1px solid rgba(201, 109, 63, 0.45);
