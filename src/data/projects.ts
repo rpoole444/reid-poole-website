@@ -83,8 +83,8 @@ export const projects: Project[] = [
     category: "Band · Live events",
     description:
       "Soulful, groovy, New Orleans-rooted live music for private events, celebrations, and audiences ready for a full-band experience.",
-    image: "/images/projects/poole-and-the-gang-cover.jpg",
-    imageAlt: "Poole and the Gang cream and orange logo on a textured black background",
+    image: "/images/projects/poole-and-the-gang/horizontal-wordmark.jpg",
+    imageAlt: "Poole and the Gang cream and orange horizontal wordmark on black",
     href: "/book?service=performance",
     linkLabel: "Book Poole and the Gang",
   },
