@@ -9,14 +9,14 @@ const services = [
     title: "Live music",
     description:
       "New Orleans-rooted jazz, brass, swing, and custom ensembles for rooms that deserve more than background music.",
-    link: "Explore performances",
-    href: "/book?service=performance",
+    link: "Explore bands & pricing",
+    href: "/pricing",
   },
   {
     number: "02",
     title: "Lessons & mentorship",
     description:
-      "Direct, practical coaching in trumpet, improvisation, bandleading, artistry, and the business around the music.",
+      "Teaching from elementary music and beginning band through high school ensembles, college performance, and music-industry studies.",
     link: "Study with Reid",
     href: "/book?service=lessons",
   },
@@ -46,19 +46,19 @@ export default function Home() {
     <main>
       <section className="hero" aria-labelledby="hero-title">
         <div className="hero-copy">
-          <p className="eyebrow">Musician · Bandleader · Builder</p>
+          <p className="eyebrow">Musician · Bandleader · Educator · Builder</p>
           <h1 id="hero-title">
             Music with
             <span>forward motion.</span>
           </h1>
           <p className="hero-intro">
-            Reid Poole brings New Orleans soul, Colorado energy, and a
-            technologist&apos;s mind to performances, artists, and ambitious
-            creative ideas.
+            Reid Poole brings New Orleans soul, an educator&apos;s ear,
+            Colorado energy, and a technologist&apos;s mind to performances,
+            students, artists, and ambitious creative ideas.
           </p>
           <div className="hero-actions">
-            <Link className="button button-primary" href="/book">
-              Book Reid <span aria-hidden="true">↗</span>
+            <Link className="button button-primary" href="/pricing">
+              Explore live music <span aria-hidden="true">↗</span>
             </Link>
             <Link className="text-link" href="#work">
               See selected work <span aria-hidden="true">↓</span>
@@ -105,8 +105,15 @@ export default function Home() {
 
       <section className="services" id="services">
         <div className="section-heading">
-          <p className="section-label">Ways to work together</p>
-          <h2>One creative partner. Several instruments.</h2>
+          <div>
+            <p className="section-label">Ways to work together</p>
+            <h2>Choose the kind of momentum you need.</h2>
+          </div>
+          <p className="services-intro">
+            Start with a clear path, then shape the details together. Live
+            music visitors can review estimated pricing before opening an
+            inquiry.
+          </p>
         </div>
         <div className="service-list">
           {services.map((service) => (
@@ -166,7 +173,14 @@ export default function Home() {
 
       <footer>
         <Link className="wordmark footer-mark" href="/">
-          <span>RP</span>
+          <span aria-hidden="true">
+            <Image
+              src="/images/projects/poole-and-the-gang/monogram.jpg"
+              alt=""
+              fill
+              sizes="36px"
+            />
+          </span>
           <strong>Reid Poole</strong>
         </Link>
         <p>Music · Events · Innovation</p>

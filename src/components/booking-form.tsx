@@ -7,13 +7,14 @@ const serviceOptions = [
   "Wedding music",
   "Corporate or private event",
   "Private lessons",
+  "School or college teaching",
   "Artist development",
   "Creative event direction",
   "Music technology",
   "Other",
 ];
 
-export function BookingForm() {
+export function BookingForm({ defaultService = "" }: { defaultService?: string }) {
   const [submitted, setSubmitted] = useState(false);
 
   function handleSubmit(event: FormEvent<HTMLFormElement>) {
@@ -46,7 +47,7 @@ export function BookingForm() {
     <form className="booking-form" onSubmit={handleSubmit}>
       <div className="form-field form-field-wide">
         <label htmlFor="service">What can I help with?</label>
-        <select id="service" name="service" required defaultValue="">
+        <select id="service" name="service" required defaultValue={defaultService}>
           <option value="" disabled>
             Select a service
           </option>

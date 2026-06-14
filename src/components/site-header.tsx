@@ -7,7 +7,7 @@ const navigation = [
   { label: "Projects", href: "/projects" },
   { label: "Music", href: "/music" },
   { label: "Photos", href: "/photos" },
-  { label: "Services", href: "/#services" },
+  { label: "Pricing", href: "/pricing" },
 ];
 
 export function SiteHeader() {

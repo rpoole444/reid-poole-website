@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { BookingForm } from "@/components/booking-form";
 
 export const metadata = {
@@ -6,7 +7,24 @@ export const metadata = {
     "Request live music, lessons, artist mentorship, event direction, or music technology services from Reid Poole.",
 };
 
-export default function BookPage() {
+const serviceDefaults: Record<string, string> = {
+  performance: "Live performance",
+  lessons: "Private lessons",
+  technology: "Music technology",
+  wedding: "Wedding music",
+};
+
+export default async function BookPage({
+  searchParams,
+}: {
+  searchParams: Promise<{ service?: string | string[] }>;
+}) {
+  const requestedService = (await searchParams).service;
+  const serviceKey = Array.isArray(requestedService)
+    ? requestedService[0]
+    : requestedService;
+  const defaultService = serviceKey ? serviceDefaults[serviceKey] || "" : "";
+
   return (
     <main className="interior-page booking-page">
       <article className="interior-content booking-content">
@@ -37,9 +55,12 @@ export default function BookPage() {
                 </dd>
               </div>
             </dl>
+            <Link className="booking-pricing-link" href="/pricing">
+              Review estimated band pricing <span aria-hidden="true">↗</span>
+            </Link>
           </div>
         </div>
-        <BookingForm />
+        <BookingForm defaultService={defaultService} />
       </article>
     </main>
   );

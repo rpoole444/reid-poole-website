@@ -10,8 +10,8 @@ export function InteractiveHero() {
     const x = (event.clientX - bounds.left) / bounds.width - 0.5;
     const y = (event.clientY - bounds.top) / bounds.height - 0.5;
 
-    sceneRef.current?.style.setProperty("--pointer-x", `${x * 14}deg`);
-    sceneRef.current?.style.setProperty("--pointer-y", `${y * -14}deg`);
+    sceneRef.current?.style.setProperty("--pointer-x", `${x * 11}deg`);
+    sceneRef.current?.style.setProperty("--pointer-y", `${y * -11}deg`);
   }
 
   return (
@@ -28,124 +28,111 @@ export function InteractiveHero() {
       <div className="orbit orbit-one" />
       <div className="orbit orbit-two" />
       <div className="orbit orbit-three" />
-      <svg
-        className="instrument"
-        viewBox="0 0 840 360"
-        role="presentation"
-      >
+      <svg className="instrument" viewBox="0 0 840 360" role="presentation">
         <defs>
           <linearGradient id="brass-body" x1="0" y1="0" x2="0" y2="1">
-            <stop offset="0" stopColor="#fff0b0" />
-            <stop offset="0.22" stopColor="#dba64e" />
-            <stop offset="0.52" stopColor="#7a401d" />
-            <stop offset="0.78" stopColor="#e6b55d" />
-            <stop offset="1" stopColor="#7f451f" />
+            <stop offset="0" stopColor="#fff2b3" />
+            <stop offset="0.2" stopColor="#e9bd62" />
+            <stop offset="0.5" stopColor="#8b4b22" />
+            <stop offset="0.76" stopColor="#dca44b" />
+            <stop offset="1" stopColor="#6d3518" />
           </linearGradient>
-          <linearGradient id="brass-dark" x1="0" y1="0" x2="1" y2="0">
-            <stop offset="0" stopColor="#603018" />
-            <stop offset="0.45" stopColor="#e1ad53" />
-            <stop offset="0.7" stopColor="#fff0a6" />
-            <stop offset="1" stopColor="#6b3518" />
+          <linearGradient id="brass-horizontal" x1="0" y1="0" x2="1" y2="0">
+            <stop offset="0" stopColor="#75401e" />
+            <stop offset="0.35" stopColor="#e6b65a" />
+            <stop offset="0.62" stopColor="#fff0a5" />
+            <stop offset="1" stopColor="#743b1b" />
           </linearGradient>
           <linearGradient id="bell-flare" x1="0" y1="0" x2="1" y2="0">
-            <stop offset="0" stopColor="#7d411e" />
-            <stop offset="0.25" stopColor="#e7b65c" />
-            <stop offset="0.58" stopColor="#fff0a2" />
-            <stop offset="0.82" stopColor="#b8692d" />
-            <stop offset="1" stopColor="#6a3418" />
+            <stop offset="0" stopColor="#8b4a20" />
+            <stop offset="0.38" stopColor="#e9b85b" />
+            <stop offset="0.68" stopColor="#ffeda0" />
+            <stop offset="1" stopColor="#a95e28" />
           </linearGradient>
-          <radialGradient id="bell-face" cx="42%" cy="42%" r="70%">
-            <stop offset="0" stopColor="#2a140c" />
-            <stop offset="0.52" stopColor="#6b3518" />
-            <stop offset="0.76" stopColor="#e4ae52" />
-            <stop offset="1" stopColor="#fff0a3" />
+          <radialGradient id="bell-face" cx="38%" cy="42%" r="72%">
+            <stop offset="0" stopColor="#241109" />
+            <stop offset="0.5" stopColor="#653118" />
+            <stop offset="0.78" stopColor="#d6953e" />
+            <stop offset="1" stopColor="#ffe99a" />
           </radialGradient>
-          <filter id="brass-shadow" x="-20%" y="-25%" width="150%" height="170%">
+          <filter id="brass-shadow" x="-20%" y="-30%" width="150%" height="180%">
             <feDropShadow
-              dx="18"
-              dy="22"
-              stdDeviation="15"
+              dx="15"
+              dy="20"
+              stdDeviation="13"
               floodColor="#000"
               floodOpacity="0.48"
             />
           </filter>
         </defs>
 
-        <g filter="url(#brass-shadow)">
-          <path
-            className="trumpet-tube"
-            d="M298 211 H568 C604 211 627 198 646 175"
-          />
+        <g className="trumpet" filter="url(#brass-shadow)">
           <path
             className="trumpet-tube trumpet-leadpipe"
-            d="M111 129 H306 C329 129 343 143 343 164"
+            d="M104 160 H302 C320 160 330 172 330 190"
+          />
+          <path
+            className="trumpet-tube trumpet-bell-pipe"
+            d="M300 216 H570 C601 216 621 206 642 188"
           />
           <path
             className="trumpet-tube trumpet-main-slide"
-            d="M298 130 H245 C211 130 192 150 192 181 V218 C192 250 212 269 245 269 H313"
-          />
-          <path
-            className="trumpet-tube trumpet-first-slide"
-            d="M377 205 V274 C377 292 389 302 408 302 H425 C443 302 455 291 455 273 V221"
-          />
-          <path
-            className="trumpet-tube trumpet-third-slide"
-            d="M476 207 V260 C476 279 490 291 509 291 H538 C557 291 570 278 570 258 V218"
+            d="M312 164 H248 C218 164 203 181 203 209 V238 C203 266 219 282 248 282 H335"
           />
 
           <g className="trumpet-valves">
             {[0, 1, 2].map((valve) => {
-              const x = 343 + valve * 52;
+              const x = 330 + valve * 54;
 
               return (
                 <g key={x}>
                   <rect
                     x={x}
-                    y="116"
-                    width="35"
-                    height="119"
+                    y="132"
+                    width="36"
+                    height="116"
                     rx="7"
-                    fill="url(#brass-dark)"
-                    stroke="#f4cf78"
+                    fill="url(#brass-body)"
+                    stroke="#f2ca72"
                     strokeWidth="2.5"
                   />
                   <rect
                     x={x + 6}
-                    y="98"
-                    width="23"
+                    y="113"
+                    width="24"
                     height="24"
                     rx="4"
-                    fill="url(#brass-body)"
+                    fill="url(#brass-horizontal)"
                   />
                   <path
-                    d={`M${x + 17.5} 98 V72`}
+                    d={`M${x + 18} 114 V88`}
                     stroke="url(#brass-body)"
                     strokeWidth="8"
                     strokeLinecap="round"
                   />
                   <ellipse
-                    cx={x + 17.5}
-                    cy="68"
-                    rx="22"
+                    cx={x + 18}
+                    cy="83"
+                    rx="20"
                     ry="7"
-                    fill="url(#brass-body)"
-                    stroke="#fff0a6"
+                    fill="url(#brass-horizontal)"
+                    stroke="#ffe89a"
                     strokeWidth="1.5"
                   />
                   <rect
                     x={x - 2}
-                    y="225"
-                    width="39"
-                    height="12"
+                    y="242"
+                    width="40"
+                    height="11"
                     rx="5"
-                    fill="url(#brass-body)"
+                    fill="url(#brass-horizontal)"
                   />
                   <path
-                    d={`M${x + 5} 129 H${x + 30}`}
-                    stroke="#fff0aa"
+                    d={`M${x + 8} 145 H${x + 28}`}
+                    stroke="#fff2ad"
                     strokeWidth="2"
                     strokeLinecap="round"
-                    opacity="0.72"
+                    opacity="0.68"
                   />
                 </g>
               );
@@ -153,133 +140,127 @@ export function InteractiveHero() {
           </g>
 
           <path
-            d="M327 141 H505"
-            stroke="#f5d479"
-            strokeWidth="5"
-            strokeLinecap="round"
-            opacity="0.78"
+            className="trumpet-tube trumpet-valve-slide"
+            d="M366 230 V273 C366 290 377 299 394 299 H407 C424 299 435 290 435 273 V230"
           />
           <path
-            d="M320 211 H518"
-            stroke="#75401e"
+            className="trumpet-tube trumpet-third-slide"
+            d="M474 231 V266 C474 282 485 291 502 291 H528 C545 291 556 281 556 265 V226"
+          />
+
+          <path
+            d="M318 177 H508"
+            stroke="#ffe99b"
+            strokeWidth="4"
+            strokeLinecap="round"
+            opacity="0.68"
+          />
+          <path
+            d="M320 216 H542"
+            stroke="#6d3619"
             strokeWidth="5"
             strokeLinecap="round"
           />
           <rect
-            x="309"
-            y="139"
-            width="15"
-            height="75"
+            x="313"
+            y="174"
+            width="14"
+            height="47"
             rx="6"
             fill="url(#brass-body)"
           />
           <path
-            d="M319 137 C303 116 282 115 270 130"
+            d="M316 175 C301 151 279 149 266 165"
             fill="none"
             stroke="url(#brass-body)"
-            strokeWidth="8"
+            strokeWidth="7"
             strokeLinecap="round"
           />
           <circle
-            cx="273"
-            cy="128"
-            r="9"
+            cx="267"
+            cy="164"
+            r="8"
             fill="none"
-            stroke="#e7b95f"
-            strokeWidth="5"
+            stroke="#e8b65b"
+            strokeWidth="4"
           />
 
           <path
-            d="M548 174 C602 167 646 139 699 87 L699 273 C647 224 601 199 548 193 Z"
+            d="M548 190 C590 184 625 164 667 126 C689 106 710 91 734 80 L734 280 C707 266 685 250 664 231 C624 197 590 184 548 181 Z"
             fill="url(#bell-flare)"
-            stroke="#f3cc70"
+            stroke="#f2c76c"
             strokeWidth="3"
           />
           <ellipse
-            cx="702"
+            cx="738"
             cy="180"
-            rx="31"
-            ry="103"
+            rx="37"
+            ry="108"
             fill="url(#bell-face)"
-            stroke="#f4ce75"
+            stroke="#f6d17a"
             strokeWidth="6"
           />
           <ellipse
-            cx="698"
+            cx="733"
             cy="180"
-            rx="13"
-            ry="68"
-            fill="#30170c"
-            opacity="0.8"
+            rx="16"
+            ry="72"
+            fill="#2b140b"
+            opacity="0.88"
           />
           <path
-            d="M568 179 C611 168 654 135 688 102"
+            d="M575 188 C622 173 670 126 714 98"
             fill="none"
-            stroke="#fff2ad"
+            stroke="#fff1aa"
             strokeWidth="4"
             strokeLinecap="round"
-            opacity="0.58"
+            opacity="0.5"
           />
 
           <path
-            d="M111 129 H79"
+            d="M104 160 H76"
             stroke="url(#brass-body)"
-            strokeWidth="14"
+            strokeWidth="13"
             strokeLinecap="round"
           />
           <path
-            d="M80 129 H52"
-            stroke="url(#brass-dark)"
-            strokeWidth="9"
+            d="M76 160 H50"
+            stroke="url(#brass-horizontal)"
+            strokeWidth="8"
             strokeLinecap="round"
           />
           <path
-            d="M53 129 H31"
-            stroke="#f0cc7a"
+            d="M50 160 H35"
+            stroke="#edc36d"
             strokeWidth="4"
             strokeLinecap="round"
           />
           <path
-            d="M30 116 C42 118 46 124 46 129 C46 135 42 141 30 143 Z"
-            fill="url(#brass-dark)"
-            stroke="#f2ce7c"
+            d="M22 149 H35 V171 H22 C29 165 29 155 22 149 Z"
+            fill="url(#brass-horizontal)"
+            stroke="#f0cb77"
             strokeWidth="2"
           />
 
           <path
-            d="M307 248 H329"
-            stroke="#f0c56c"
-            strokeWidth="7"
-            strokeLinecap="round"
-          />
-          <path
-            d="M511 257 H541"
-            stroke="#f0c56c"
+            d="M309 270 H331"
+            stroke="#edbd62"
             strokeWidth="7"
             strokeLinecap="round"
           />
           <circle
             cx="301"
-            cy="248"
-            r="9"
+            cy="270"
+            r="8"
             fill="none"
-            stroke="#e5b45b"
-            strokeWidth="5"
+            stroke="#e5ad52"
+            strokeWidth="4"
           />
           <path
-            d="M518 159 C537 145 552 150 559 162"
-            fill="none"
-            stroke="#dca64f"
+            d="M512 263 H540"
+            stroke="#edbd62"
             strokeWidth="7"
             strokeLinecap="round"
-          />
-          <circle
-            cx="560"
-            cy="164"
-            r="11"
-            fill="none"
-            stroke="#eabe66"
-            strokeWidth="5"
           />
         </g>
       </svg>

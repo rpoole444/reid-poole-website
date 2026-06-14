@@ -18,8 +18,8 @@ export const projects: Project[] = [
       "Soulful, groovy, New Orleans-rooted live music for private events, celebrations, and audiences ready for a full-band experience.",
     image: "/images/projects/poole-and-the-gang/horizontal-wordmark.jpg",
     imageAlt: "Poole and the Gang cream and orange horizontal wordmark on black",
-    href: "/book?service=performance",
-    linkLabel: "Book Poole and the Gang",
+    href: "/pricing#full-band",
+    linkLabel: "See band pricing",
   },
   {
     title: "Reid Poole & The Night Owls",
@@ -28,8 +28,8 @@ export const projects: Project[] = [
       "A dance-driven band focused on the brass band music of New Orleans and the joyful swing tradition inspired by Louis Armstrong and King Oliver.",
     image: "/images/projects/night-owls.jpg",
     imageAlt: "Reid Poole and the Night Owls illustrated owl logo",
-    href: "/book?service=performance",
-    linkLabel: "Book the Night Owls",
+    href: "/pricing#full-band",
+    linkLabel: "See band pricing",
   },
   {
     title: "Reid Poole Quintet",
@@ -38,8 +38,8 @@ export const projects: Project[] = [
       "Modern jazz and modern music shaped by Reid's love of bebop, hard bop, New Orleans swing, contemporary jazz, and experimental sound.",
     image: "/images/photos/blue-stage-band.jpg",
     imageAlt: "Jazz quintet performing under blue stage lights",
-    href: "/book?service=performance",
-    linkLabel: "Plan a performance",
+    href: "/pricing#full-band",
+    linkLabel: "See quintet pricing",
   },
   {
     title: "New Orleans Big Beat",

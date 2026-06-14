@@ -37,9 +37,19 @@ export default function AboutPage() {
             <p>
               He has performed with the Panorama Brass Band, Trumpet Mafia,
               Delfeayo Marsalis&apos; Uptown Jazz Orchestra, and numerous
-              projects of his own. Away from the stage, he develops music
-              technology, mentors artists, and helps strengthen creative
-              communities.
+              projects of his own.
+            </p>
+            <p>
+              As an educator, Reid has taught elementary music and beginning
+              band, worked with high school band programs, and led college
+              music performance and music-industry classes. His teaching
+              connects fundamentals with listening, improvisation, ensemble
+              awareness, creative confidence, and the practical realities of
+              a life in music.
+            </p>
+            <p>
+              Away from the stage and classroom, he develops music technology,
+              mentors artists, and helps strengthen creative communities.
             </p>
             <Link className="button button-primary" href="/book">
               Work with Reid <span aria-hidden="true">↗</span>

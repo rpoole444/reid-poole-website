@@ -9,7 +9,7 @@ export const metadata: Metadata = {
     template: "%s | Reid Poole",
   },
   description:
-    "Colorado Springs musician, New Orleans-trained bandleader, educator, and music technologist Reid Poole.",
+    "Colorado Springs musician, New Orleans-trained bandleader, music educator, and music technologist Reid Poole.",
   openGraph: {
     title: "Reid Poole | Music, Events & Innovation",
     description:
