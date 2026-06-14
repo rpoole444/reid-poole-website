@@ -12,14 +12,44 @@ export type Project = {
 
 export const projects: Project[] = [
   {
+    title: "Poole and the Gang",
+    category: "Band · Live events",
+    description:
+      "Soulful, groovy, New Orleans-rooted live music for private events, celebrations, and audiences ready for a full-band experience.",
+    image: "/images/projects/poole-and-the-gang/horizontal-wordmark.jpg",
+    imageAlt: "Poole and the Gang cream and orange horizontal wordmark on black",
+    href: "/book?service=performance",
+    linkLabel: "Book Poole and the Gang",
+  },
+  {
+    title: "Reid Poole & The Night Owls",
+    category: "New Orleans brass · Swing",
+    description:
+      "A dance-driven band focused on the brass band music of New Orleans and the joyful swing tradition inspired by Louis Armstrong and King Oliver.",
+    image: "/images/projects/night-owls.jpg",
+    imageAlt: "Reid Poole and the Night Owls illustrated owl logo",
+    href: "/book?service=performance",
+    linkLabel: "Book the Night Owls",
+  },
+  {
+    title: "Reid Poole Quintet",
+    category: "Modern jazz · Original music",
+    description:
+      "Modern jazz and modern music shaped by Reid's love of bebop, hard bop, New Orleans swing, contemporary jazz, and experimental sound.",
+    image: "/images/photos/blue-stage-band.jpg",
+    imageAlt: "Jazz quintet performing under blue stage lights",
+    href: "/book?service=performance",
+    linkLabel: "Plan a performance",
+  },
+  {
     title: "New Orleans Big Beat",
     category: "Bandleading · Performance",
     description:
       "A large, flexible ensemble carrying New Orleans rhythm, brass, and celebration into Colorado rooms.",
     image: "/images/photos/panorama-brass-band.jpg",
     imageAlt: "Reid Poole performing trumpet with a brass band outdoors",
-    href: "/book?service=performance",
-    linkLabel: "Book the band",
+    href: "https://www.youtube.com/playlist?list=PLPld8-NBbGLs",
+    linkLabel: "Watch the playlist",
   },
   {
     title: "Dinosaurchestra",
@@ -32,24 +62,15 @@ export const projects: Project[] = [
     linkLabel: "Hear the records",
   },
   {
-    title: "Reid Poole & The Night Owls",
-    category: "Classic R&B · Swing",
+    title: "Human Frequency",
+    category: "Radio · Curation",
     description:
-      "A sharp, joyful party band built for dancing, timeless songs, and rooms that want real live energy.",
-    image: "/images/projects/night-owls.jpg",
-    imageAlt: "Reid Poole and the Night Owls illustrated owl logo",
-    href: "/book?service=performance",
-    linkLabel: "Book the Night Owls",
-  },
-  {
-    title: "Reid Poole Quintet",
-    category: "Modern jazz · Improvisation",
-    description:
-      "An agile small group for original voices, close listening, and the conversational side of jazz.",
-    image: "/images/photos/blue-stage-band.jpg",
-    imageAlt: "Jazz quintet performing under blue stage lights",
-    href: "/book?service=performance",
-    linkLabel: "Plan a performance",
+      "Human-hosted radio and human-chosen music: a listening project presented by Alpine Groove Guide.",
+    image: "/images/projects/human-frequency-wordmark-stacked.png",
+    imageAlt: "Human Frequency, human-hosted radio and human-chosen music",
+    imageFit: "contain",
+    href: "https://human-frequency.vercel.app/",
+    linkLabel: "Listen to Human Frequency",
   },
   {
     title: "Alpine Groove Guide",
@@ -58,17 +79,8 @@ export const projects: Project[] = [
       "A guide to the artists, venues, stories, and independent culture shaping the sound of the Front Range.",
     image: "/images/projects/alpine-groove-wordmark.jpg",
     imageAlt: "Alpine Groove Guide, the sound of the Front Range",
-    status: "Growing project",
-  },
-  {
-    title: "Human Frequency",
-    category: "Radio · Curation",
-    description:
-      "Human-hosted radio and human-chosen music: a listening project presented by Alpine Groove Guide.",
-    image: "/images/projects/human-frequency-wordmark-stacked.png",
-    imageAlt: "Human Frequency, human-hosted radio and human-chosen music",
-    imageFit: "contain",
-    status: "In development",
+    href: "https://alpinegrooveguide.com",
+    linkLabel: "Visit Alpine Groove Guide",
   },
   {
     title: "GigBoss",
@@ -79,15 +91,5 @@ export const projects: Project[] = [
     imageAlt: "Reid Poole at the GigBoss booth during a music industry convention",
     href: "/book?service=technology",
     linkLabel: "Discuss music technology",
-  },
-  {
-    title: "Poole and the Gang",
-    category: "Band · Live events",
-    description:
-      "Soulful, groovy, New Orleans-rooted live music for private events, celebrations, and audiences ready for a full-band experience.",
-    image: "/images/projects/poole-and-the-gang/horizontal-wordmark.jpg",
-    imageAlt: "Poole and the Gang cream and orange horizontal wordmark on black",
-    href: "/book?service=performance",
-    linkLabel: "Book Poole and the Gang",
   },
 ];

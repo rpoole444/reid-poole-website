@@ -55,14 +55,18 @@ a {
 
 .wordmark span {
   align-items: center;
-  border: 1px solid currentColor;
   border-radius: 50%;
   display: flex;
-  font-family: Georgia, serif;
   height: 36px;
   justify-content: center;
-  letter-spacing: -0.08em;
+  overflow: hidden;
+  position: relative;
   width: 36px;
+}
+
+.wordmark span img {
+  object-fit: cover;
+  transform: scale(1.18);
 }
 
 .desktop-nav {
@@ -683,16 +687,17 @@ footer small {
 }
 
 .about-portrait {
-  aspect-ratio: 5 / 6;
-  margin: 90px 0 0 auto;
-  max-width: 620px;
+  aspect-ratio: 16 / 9;
+  margin: 90px 0 0;
+  max-width: 1180px;
   overflow: hidden;
   position: relative;
-  width: 44%;
+  width: 100%;
 }
 
 .about-portrait img {
   object-fit: cover;
+  object-position: center 42%;
 }
 
 .about-portrait figcaption {

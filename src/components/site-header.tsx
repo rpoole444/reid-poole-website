@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 
 const navigation = [
@@ -13,7 +14,14 @@ export function SiteHeader() {
   return (
     <header className="site-header">
       <Link className="wordmark" href="/" aria-label="Reid Poole home">
-        <span>RP</span>
+        <span aria-hidden="true">
+          <Image
+            src="/images/projects/poole-and-the-gang/monogram.jpg"
+            alt=""
+            fill
+            sizes="36px"
+          />
+        </span>
         <strong>Reid Poole</strong>
       </Link>
 

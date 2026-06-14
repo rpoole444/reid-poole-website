@@ -15,13 +15,13 @@ export default function AboutPage() {
         <h1>A musician&apos;s ear. A builder&apos;s mind.</h1>
         <figure className="about-portrait">
           <Image
-            src="/images/photos/family-trumpet.jpg"
-            alt="Reid Poole holding his child while playing trumpet"
+            src="/images/photos/littleman-performance.jpg"
+            alt="Reid Poole performing trumpet in a colorful shirt"
             fill
             priority
-            sizes="(max-width: 900px) 100vw, 42vw"
+            sizes="(max-width: 900px) 100vw, 86vw"
           />
-          <figcaption>Musician, teacher, husband, and father.</figcaption>
+          <figcaption>Onstage in Colorado.</figcaption>
         </figure>
         <div className="interior-columns">
           <p className="lead">
