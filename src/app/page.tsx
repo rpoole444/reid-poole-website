@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { GigSchedule } from "@/components/gig-schedule";
 import { InteractiveHero } from "@/components/interactive-hero";
 import { projects } from "@/data/projects";
 
@@ -84,6 +85,8 @@ export default function Home() {
         />
         <figcaption>Live music belongs in the middle of things.</figcaption>
       </figure>
+
+      <GigSchedule />
 
       <section className="statement" id="about">
         <p className="section-label">A wider practice</p>

@@ -264,6 +264,55 @@ h1 span {
   z-index: 1;
 }
 
+.gig-schedule {
+  align-items: start;
+  background: var(--paper);
+  color: var(--ink);
+  display: grid;
+  gap: clamp(36px, 6vw, 90px);
+  grid-template-columns: minmax(240px, 0.65fr) minmax(0, 1.35fr);
+  padding: clamp(76px, 10vw, 140px) 7vw;
+}
+
+.gig-schedule-copy {
+  position: sticky;
+  top: 120px;
+}
+
+.gig-schedule-copy h2 {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(46px, 5.5vw, 82px);
+  font-weight: 400;
+  letter-spacing: -0.055em;
+  line-height: 0.95;
+  margin-bottom: 28px;
+}
+
+.gig-schedule-copy > p:not(.section-label) {
+  color: rgba(18, 16, 14, 0.68);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 17px;
+  line-height: 1.65;
+  margin-bottom: 30px;
+  max-width: 430px;
+}
+
+.gig-schedule-frame {
+  background: #fafaf9;
+  border: 1px solid rgba(18, 16, 14, 0.15);
+  border-radius: 20px;
+  box-shadow: 0 24px 70px rgba(18, 16, 14, 0.12);
+  min-height: 560px;
+  overflow: hidden;
+}
+
+.gig-schedule-frame iframe {
+  border: 0;
+  display: block;
+  height: 560px;
+  width: 100%;
+}
+
 .visual-stage {
   --pointer-x: 0deg;
   --pointer-y: 0deg;
@@ -1435,6 +1484,14 @@ a.projects-index-card:hover img {
     display: none;
   }
 
+  .gig-schedule {
+    grid-template-columns: 1fr;
+  }
+
+  .gig-schedule-copy {
+    position: static;
+  }
+
   .mobile-nav {
     display: block;
     justify-self: end;
@@ -1667,8 +1724,15 @@ a.projects-index-card:hover img {
   .statement,
   .services,
   .work,
-  .contact {
+  .contact,
+  .gig-schedule {
     padding: 80px 5vw;
+  }
+
+  .gig-schedule-frame,
+  .gig-schedule-frame iframe {
+    min-height: 620px;
+    height: 620px;
   }
 
   .pricing-content {
