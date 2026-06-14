@@ -11,15 +11,6 @@ export const metadata = {
 export default function ProjectsPage() {
   return (
     <main className="interior-page">
-      <header className="interior-header">
-        <Link className="wordmark" href="/">
-          <span>RP</span>
-          <strong>Reid Poole</strong>
-        </Link>
-        <Link className="header-cta" href="/book">
-          Start a project
-        </Link>
-      </header>
       <article className="interior-content projects-page">
         <p className="eyebrow">The active roster</p>
         <h1>Bands, platforms, and ideas with a pulse.</h1>

@@ -1,4 +1,3 @@
-import Link from "next/link";
 import { PhotoLibrary } from "@/components/media-gallery";
 
 export const metadata = {
@@ -10,15 +9,6 @@ export const metadata = {
 export default function PhotosPage() {
   return (
     <main className="interior-page">
-      <header className="interior-header">
-        <Link className="wordmark" href="/">
-          <span>RP</span>
-          <strong>Reid Poole</strong>
-        </Link>
-        <Link className="header-cta" href="/book">
-          Book Reid
-        </Link>
-      </header>
       <article className="interior-content photo-page">
         <p className="eyebrow">The archive</p>
         <h1>Photos with some life in them.</h1>

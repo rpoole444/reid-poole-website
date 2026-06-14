@@ -10,15 +10,6 @@ export const metadata = {
 export default function AboutPage() {
   return (
     <main className="interior-page">
-      <header className="interior-header">
-        <Link className="wordmark" href="/">
-          <span>RP</span>
-          <strong>Reid Poole</strong>
-        </Link>
-        <Link className="header-cta" href="/book">
-          Start a project
-        </Link>
-      </header>
       <article className="interior-content">
         <p className="eyebrow">About Reid</p>
         <h1>A musician&apos;s ear. A builder&apos;s mind.</h1>

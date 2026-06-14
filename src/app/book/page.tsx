@@ -1,4 +1,3 @@
-import Link from "next/link";
 import { BookingForm } from "@/components/booking-form";
 
 export const metadata = {
@@ -10,16 +9,6 @@ export const metadata = {
 export default function BookPage() {
   return (
     <main className="interior-page booking-page">
-      <header className="interior-header">
-        <Link className="wordmark" href="/">
-          <span>RP</span>
-          <strong>Reid Poole</strong>
-        </Link>
-        <Link className="header-cta" href="/">
-          Back home
-        </Link>
-      </header>
-
       <article className="interior-content booking-content">
         <div className="booking-intro">
           <div>

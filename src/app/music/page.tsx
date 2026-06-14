@@ -21,15 +21,6 @@ export const metadata = {
 export default function MusicPage() {
   return (
     <main className="interior-page music-page">
-      <header className="interior-header">
-        <Link className="wordmark" href="/">
-          <span>RP</span>
-          <strong>Reid Poole</strong>
-        </Link>
-        <Link className="header-cta" href="/book">
-          Book a performance
-        </Link>
-      </header>
       <article className="interior-content">
         <p className="eyebrow">Selected music</p>
         <h1>Different bands. One deep pulse.</h1>

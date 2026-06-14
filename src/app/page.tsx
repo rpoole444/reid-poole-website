@@ -30,27 +30,20 @@ const services = [
   },
 ];
 
-const featuredProjects = [projects[0], projects[1], projects[4]];
+const featuredProjectNames = [
+  "Poole and the Gang",
+  "Human Frequency",
+  "Reid Poole & The Night Owls",
+];
+
+const featuredProjects = featuredProjectNames.flatMap((title) => {
+  const project = projects.find((candidate) => candidate.title === title);
+  return project ? [project] : [];
+});
 
 export default function Home() {
   return (
     <main>
-      <header className="site-header">
-        <Link className="wordmark" href="/" aria-label="Reid Poole home">
-          <span>RP</span>
-          <strong>Reid Poole</strong>
-        </Link>
-        <nav aria-label="Main navigation">
-          <Link href="/projects">Projects</Link>
-          <Link href="#services">Services</Link>
-          <Link href="#about">About</Link>
-          <Link href="/photos">Photos</Link>
-        </nav>
-        <Link className="header-cta" href="/book">
-          Start a project
-        </Link>
-      </header>
-
       <section className="hero" aria-labelledby="hero-title">
         <div className="hero-copy">
           <p className="eyebrow">Musician · Bandleader · Builder</p>
@@ -143,14 +136,17 @@ export default function Home() {
           {featuredProjects.map((project, index) => (
             <Link
               className={`project project-${index + 1}`}
-              href="/projects"
+              href={project.href || "/projects"}
               key={project.title}
+              target={project.href?.startsWith("http") ? "_blank" : undefined}
+              rel={project.href?.startsWith("http") ? "noreferrer" : undefined}
             >
               <Image
                 src={project.image}
                 alt=""
                 fill
                 sizes="(max-width: 900px) 100vw, 33vw"
+                style={{ objectFit: project.imageFit || "cover" }}
               />
               <span className="project-meta">{project.category}</span>
               <h3>{project.title}</h3>
