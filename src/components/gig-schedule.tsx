@@ -26,3 +26,8 @@ export function GigSchedule() {
           src={SCHEDULE_URL}
           title="Reid Poole upcoming shows"
           loading="lazy"
+        />
+      </div>
+    </section>
+  );
+}
